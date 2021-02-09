@@ -3,7 +3,7 @@ GCC  = gcc
 LINKER = $(CC)
 
 ifeq ($(ENABLE_OPENMP),true)
-OPENMP   = -Xpreprocessor -fopenmp
+OPENMP   = -Xpreprocessor -fopenmp -verbose
 LIBS     = -lomp
 endif
 

@@ -3,7 +3,7 @@ GCC  = gcc
 LINKER = $(CC)
 
 ifeq ($(ENABLE_OPENMP),true)
-OPENMP   = -qopenmp
+OPENMP   = -qopenmp -verbose
 endif
 
 VERSION  = --version
