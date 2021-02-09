@@ -36,12 +36,10 @@ double triad(
 {
     double S, E;
 
-    S = getTimeStamp();
 #pragma omp parallel for schedule(static)
     for (int i=0; i<N; i++) {
         a[i] = b[i] + scalar * c[i];
     }
-    E = getTimeStamp();
 
     return E-S;
 }
