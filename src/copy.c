@@ -32,14 +32,12 @@ double copy(
         int N
         )
 {
-    double S, F;
+    double S, E;
 
-    S = getTimeStamp();
 #pragma omp parallel for schedule(static)
     for (int i=0; i<N; i++) {
         a[i] = b[i];
     }
-    F = getTimeStamp();
 
-    return F-S;
+    return E-S;
 }
