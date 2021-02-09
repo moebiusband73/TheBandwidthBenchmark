@@ -33,7 +33,7 @@ double copy(
         )
 {
 #pragma omp parallel for schedule(static)
-    for (int i=0; i<N; i++) {
+    for (int i=1; i<N; i++) {
         a[i] = b[i];
     }
 }
