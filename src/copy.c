@@ -32,12 +32,8 @@ double copy(
         int N
         )
 {
-    double S, E;
-
 #pragma omp parallel for schedule(static)
     for (int i=0; i<N; i++) {
         a[i] = b[i];
     }
-
-    return E-S;
 }
